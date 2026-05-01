@@ -16,3 +16,19 @@ function prev() {
   document.getElementById("slider").src = images[index];
 }
 
+// Auto-slide every 5 seconds//
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  let slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  function showSlide() {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+    index = (index + 1) % slides.length;
+  }
+
+  setInterval(showSlide, 4000);
+
+});
