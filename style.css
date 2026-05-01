@@ -1,0 +1,125 @@
+:root {
+  --primary: #0F0F0F;
+  --secondary: #FFFFFF;
+  --accent: #2563EB;
+  --highlight: #F3F4F6;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: var(--secondary);
+}
+
+nav {
+  background: var(--primary);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+h2 {
+  color: var(--primary);
+  margin: 20px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 42px;
+  width: 42px;
+  border-radius: 10px;
+  object-fit: cover;
+
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  padding: 4px;
+}
+
+.hero {
+  height: 80vh;
+  background: url('https://via.placeholder.com/1200') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  background: #2563EB;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.navBtn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+.navBtn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+  background: #2563EB;}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: var(--highlight);
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.container {
+  padding: 20px;
+}
+
+.contact {
+  display: flex;
+  gap: 20px;
+}
