@@ -32,3 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(showSlide, 4000);
 
 });
+
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        nav.classList.add("slidedown");
+    } else {
+        nav.classList.remove("slidedown");
+    }
+});

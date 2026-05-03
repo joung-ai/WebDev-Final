@@ -6,6 +6,10 @@
   --brown: #c4a374;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Forum', serif;
@@ -13,22 +17,56 @@ body {
 }
 
 nav {
-  background: var(--primary);
-  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
+
+  background: transparent; 
+  color: var(--secondary);
+
+  transition: all 0.3s ease;
+  z-index: 1000;
+
+  box-sizing: border-box;
+}
+
+nav.slidedown {
+  position: fixed;
+  top: 0;
+  background: var(--primary); 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+nav.slidedown a,
+nav.slidedown span {
+  color: var(--secondary); 
 }
 
 nav ul {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px; 
+  align-items: center;
+  flex-wrap: wrap; 
 }
 
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
+nav a, nav span{
+  color : var(--secondary);
+}
+
+nav a.nav-btn {
+  color: var(--secondary);
+}
+
+nav.slidedown a.nav-btn {
+  color: var(--secondary);
 }
 
 h2 {
@@ -61,7 +99,6 @@ h2 {
   overflow: hidden;
 }
 
-/* House images slide*/
 .slides {
   position: absolute;
   width: 100%;
@@ -115,6 +152,21 @@ h2 {
   opacity: 0.9;
 }
 
+.contact-hero {
+  height: 300px;
+  background: url("images/contact.jpg") center/cover no-repeat;
+  position: relative;
+  background-position: center 40%;
+}
+
+.property-hero {
+  height: 300px;
+  background: url("images/properties.jpg") center/cover no-repeat;
+  position: relative;
+  background-position: center 40%;
+}
+
+
 /*styling "about us"*/
 /* About page hero section */
 .about-hero {
@@ -147,6 +199,14 @@ h2 {
   text-transform: uppercase;
   margin-bottom: 5px;
   margin-left: 0px;
+}
+
+.about-hero-text h2.about-hero-title {
+  color: var(--secondary);
+  margin: 0;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  margin-bottom: 2px;
 }
 
 .about-hero-text p {
