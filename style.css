@@ -402,7 +402,6 @@ h2 {
 }
 
 
-
 /*
 
 trying to make nav buttons consistent
@@ -589,4 +588,230 @@ body.properties .card:hover {
 /* TITLE */
 body.properties h2 {
   margin-bottom: 10px;
+}
+
+
+/*
+
+styling "contact us" page
+
+*/
+/* CONTACT PAGE */
+.contact-page {
+  min-height: 100vh;
+
+  padding: 140px 80px 80px;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url("images/contact.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* MAIN CONTAINER */
+.contact-container {
+  max-width: 1300px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* LEFT */
+.contact-left {
+  padding: 80px 60px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-left h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+
+.contact-left p {
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.contact-details {
+  margin-top: 40px;
+}
+
+.contact-details p {
+  margin-bottom: 15px;
+}
+
+/* RIGHT */
+.contact-right {
+  background: white;
+  padding: 60px;
+}
+
+.contact-form h2 {
+  font-size: 42px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* INPUTS */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+
+  padding: 16px;
+
+  margin-bottom: 20px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 10px;
+
+  font-family: 'Forum', serif;
+  font-size: 16px;
+
+  box-sizing: border-box;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--brown);
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* ROW */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* BUTTON */
+.contact-form button {
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  background: var(--brown);
+
+  color: white;
+
+  font-size: 16px;
+  letter-spacing: 1px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 20px rgba(196,163,116,0.4);
+}
+
+@media (max-width: 900px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 40px;
+  }
+
+  .contact-left h1 {
+    font-size: 42px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* MAP SECTION */
+.map-section {
+  max-width: 1300px;
+  margin: 60px auto 0;
+
+  background: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* TEXT */
+.map-text {
+  padding: 40px 50px 20px;
+}
+
+.map-text h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.map-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* MAP */
+.map-container {
+  width: 100%;
+  height: 450px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e5e5e5;
+
+  color: #666;
+
+  font-size: 20px;
+  letter-spacing: 2px;
 }
