@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Houses</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Houses</title>
 
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+</head>
+
+<body class="properties">
+
+<!-- NAVBAR -->
 <nav>
   <div class="nav-left">
-    <img src="images\logo.jpg" class="logo">
+    <img src="images/logo.jpg" class="logo">
     <span>YM Realty</span>
   </div>
- <ul>
+
+  <ul>
     <li><a href="index.html" class="btn nav-btn">Home</a></li>
     <li><a href="about.html" class="btn nav-btn">About</a></li>
     <li><a href="properties.html" class="btn nav-btn">Properties</a></li>
@@ -19,17 +27,61 @@
   </ul>
 </nav>
 
+<!-- HERO -->
+<section class="property-hero">
 
-<h2>Houses for Sale</h2>
-
-<div class="cards">
-  <div class="card">
-    <img src="https://via.placeholder.com/300">
-    <h3>House A</h3>
-    <p>₱4,500,000</p>
-    <a href="details.html" class="btn">View Details</a>
+  <div class="about-hero-text">
+    <h1>Houses</h1>
+    <p>Find your perfect dream home</p>
   </div>
-</div>
+
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="houses-page">
+
+  <div class="houses-container">
+
+    <h2>Houses for Sale</h2>
+
+    <div class="cards">
+
+      <!-- CARD 1 -->
+      <div class="card">
+
+        <img src="images/House_A_1.jpg">
+
+      <div class="card-overlay">
+          <h3>Bungalow</h3>
+          <p>BF Homes, Parañaque</p>
+
+          <a href="details.html" class="btn">
+            View Details
+          </a>
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+
+        <img src="images/House_B_1.jpg">
+
+        <div class="card-overlay">
+          <h3>3 Storey House</h3>
+          <p>Green Woods Exclusive Village</p>
+          <a href="details.html" class="btn">
+            View Details
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 </body>
 </html>

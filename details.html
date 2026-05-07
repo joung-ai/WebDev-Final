@@ -1,39 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Property Details</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Property Details - House B</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="details-page">
+
+<!-- NAVBAR -->
 <nav>
+
   <div class="nav-left">
-    <img src="images\logo.jpg" class="logo">
+    <img src="images/logo.jpg" class="logo">
     <span>YM Realty</span>
   </div>
+
   <ul>
     <li><a href="index.html" class="btn nav-btn">Home</a></li>
     <li><a href="about.html" class="btn nav-btn">About</a></li>
     <li><a href="properties.html" class="btn nav-btn">Properties</a></li>
     <li><a href="contact.html" class="btn nav-btn">Contact</a></li>
   </ul>
+
 </nav>
 
+<!-- HERO -->
+<header class="details-hero">
 
-<div class="details">
-  <img id="slider" src="https://via.placeholder.com/400">
+  <div class="details-hero-text">
 
-  <h2>Property Name</h2>
-  <p>₱5,000,000</p>
-  <p>3 Bedrooms | 2 Bathrooms</p>
+    <h1>Property Details</h1>
 
-  <button onclick="prev()">←</button>
-  <button onclick="next()">→</button>
+    <h2 class="details-hero-title">
+      Luxury Homes & Premium Living
+    </h2>
 
-  <br><br>
-  <button class="btn">Inquire Now</button>
-</div>
+  </div>
 
-<script src="script.js"></script>
+</header>
+
+<!-- MAIN -->
+<section class="property-details-section">
+
+  <div class="details-container">
+
+    <!-- LEFT SIDE -->
+    <div class="details-gallery">
+
+      <div class="slider-wrapper">
+
+        <img id="slider" src="images/House_B_1.jpg">
+
+        <!-- ARROWS -->
+        <button class="slide-btn prev-btn" onclick="prev()">
+          ←
+        </button>
+
+        <button class="slide-btn next-btn" onclick="next()">
+          →
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="details-info">
+
+      <h1>3 Storey House</h1>
+
+      <h2>₱38,000,000</h2>
+
+      <p class="location">
+        BF Homes, Parañaque
+      </p>
+
+      <div class="details-grid">
+
+        <div>LA: 350 sqm</div>
+        <div>FA: 480 sqm</div>
+
+        <div>5 Bedrooms</div>
+        <div>5 Toilet & Bath</div>
+
+        <div>Powder Room</div>
+        <div>Modern Kitchen</div>
+
+        <div>Dirty Kitchen</div>
+        <div>Service Area</div>
+
+        <div>Family Area</div>
+        <div>3 Car Garage</div>
+
+      </div>
+
+      <a href="contact.html" class="btn inquire-btn">
+        Inquire Now
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- DESCRIPTION -->
+  <div class="property-description">
+
+    <h2>Description</h2>
+
+    <p>
+      Live in elegance with this stunning 3-storey residence
+      located in BF Homes, Parañaque.
+      Featuring spacious interiors, premium finishes,
+      multiple entertainment areas,
+      and a modern architectural design,
+      this property is ideal for families seeking
+      luxury, comfort, and convenience.
+    </p>
+
+  </div>
+
+  <!-- MAP SECTION -->
+  <div class="property-map-section">
+
+    <div class="map-text">
+
+      <h2>Property Location</h2>
+
+      <p>
+        Strategically located in BF Homes, Parañaque,
+        near schools, restaurants, commercial areas,
+        and major transportation routes.
+      </p>
+
+    </div>
+
+    <div class="property-map">
+
+      <!-- MAP API HERE -->
+      <div id="map">
+        MAP API HERE
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+
+const images = [
+
+  "images/House_B_1.jpg",
+  "images/House_B_2.jpg",
+  "images/House_B_3.jpg",
+  "images/House_B_4.jpg",
+  "images/House_B_5.jpg",
+  "images/House_B_6.jpg",
+  "images/House_B_7.jpg",
+  "images/House_B_8.jpg",
+  "images/House_B_9.jpg",
+  "images/House_B_10.jpg"
+
+];
+
+let current = 0;
+
+const slider = document.getElementById("slider");
+
+/* NEXT */
+function next() {
+
+  current++;
+
+  if(current >= images.length) {
+    current = 0;
+  }
+
+  slider.src = images[current];
+}
+
+/* PREVIOUS */
+function prev() {
+
+  current--;
+
+  if(current < 0) {
+    current = images.length - 1;
+  }
+
+  slider.src = images[current];
+}
+
+/* NAVBAR SCROLL EFFECT */
+window.addEventListener("scroll", function () {
+
+  const nav = document.querySelector("nav");
+
+  nav.classList.toggle("slidedown", window.scrollY > 50);
+
+});
+
+</script>
+
 </body>
 </html>
