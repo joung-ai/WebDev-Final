@@ -5,10 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Property Details - House B</title>
+<title>Property Details</title>
 
 <link rel="stylesheet" href="style.css">
-
 <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 
 </head>
@@ -53,11 +52,11 @@
   <div class="details-container">
 
     <!-- LEFT SIDE -->
-    <div class="details-gallery">
+    <div class="details-gallery skeleton-card">
 
       <div class="slider-wrapper">
 
-        <img id="slider" src="images/House_B_1.jpg">
+        <div id="slider-content"></div>
 
         <!-- ARROWS -->
         <button class="slide-btn prev-btn" onclick="prev()">
@@ -73,34 +72,15 @@
     </div>
 
     <!-- RIGHT SIDE -->
-    <div class="details-info">
+    <div class="details-info skeleton-card">
 
-      <h1>3 Storey House</h1>
+      <h1 id="property-title" class="skeleton-text"></h1>
 
-      <h2>₱38,000,000</h2>
+      <h2 id="property-price" class="details-price skeleton-text"></h2>
 
-      <p class="location">
-        BF Homes, Parañaque
-      </p>
+      <p class="location skeleton-text" id="property-location"></p>
 
-      <div class="details-grid">
-
-        <div>LA: 350 sqm</div>
-        <div>FA: 480 sqm</div>
-
-        <div>5 Bedrooms</div>
-        <div>5 Toilet & Bath</div>
-
-        <div>Powder Room</div>
-        <div>Modern Kitchen</div>
-
-        <div>Dirty Kitchen</div>
-        <div>Service Area</div>
-
-        <div>Family Area</div>
-        <div>3 Car Garage</div>
-
-      </div>
+      <div class="details-grid" id="details-grid"></div>
 
       <a href="contact.html" class="btn inquire-btn">
         Inquire Now
@@ -111,40 +91,30 @@
   </div>
 
   <!-- DESCRIPTION -->
-  <div class="property-description">
+  <div class="property-description skeleton-card">
 
-    <h2>Description</h2>
+    <h2 class="standard-h2">Description</h2>
 
-    <p>
-      Live in elegance with this stunning 3-storey residence
-      located in BF Homes, Parañaque.
-      Featuring spacious interiors, premium finishes,
-      multiple entertainment areas,
-      and a modern architectural design,
-      this property is ideal for families seeking
-      luxury, comfort, and convenience.
-    </p>
+    <p id="property-description"></p>
 
   </div>
 
   <!-- MAP SECTION -->
-  <div class="property-map-section">
+  <div class="property-map-section skeleton-card">
 
     <div class="map-text">
 
-      <h2>Property Location</h2>
+      <h2 class="standard-h2">Property Location</h2>
 
       <p>
-        Strategically located in BF Homes, Parañaque,
-        near schools, restaurants, commercial areas,
-        and major transportation routes.
+        Strategically located near schools,
+        restaurants, malls, and major roads.
       </p>
 
     </div>
 
     <div class="property-map">
 
-      <!-- MAP API HERE -->
       <div id="map">
         MAP API HERE
       </div>
@@ -157,48 +127,248 @@
 
 <script>
 
-const images = [
+/* =====================================================
+   PROPERTY DATABASE
+===================================================== */
 
-  "images/House_B_1.jpg",
-  "images/House_B_2.jpg",
-  "images/House_B_3.jpg",
-  "images/House_B_4.jpg",
-  "images/House_B_5.jpg",
-  "images/House_B_6.jpg",
-  "images/House_B_7.jpg",
-  "images/House_B_8.jpg",
-  "images/House_B_9.jpg",
-  "images/House_B_10.jpg"
+const properties = [
+
+  {
+
+    title: "3 Storey House",
+
+    price: "₱38,000,000",
+
+    location: "BF Homes, Parañaque",
+
+    description:
+    "Live in elegance with this stunning 3-storey residence located in BF Homes, Parañaque. Featuring spacious interiors, premium finishes, and multiple entertainment areas.",
+
+    details: [
+
+      "Lot Area: 350 sqm",
+      "Floor Area: 480 sqm",
+
+      "5 Bedrooms",
+      "5 Toilet & Bath",
+
+      "Powder Room",
+      "Modern Kitchen",
+
+      "Dirty Kitchen",
+      "Service Area",
+
+      "Family Area",
+      "3 Car Garage"
+
+    ],
+
+    slides: [
+
+      {
+        type: "single",
+        image: "images/House_B_1.jpg"
+      },
+
+      {
+        type: "grid",
+
+        images: [
+          "images/House_B_2.jpg",
+          "images/House_B_3.jpg",
+          "images/House_B_4.jpg"
+        ]
+      },
+
+      {
+        type: "single",
+        image: "images/House_B_5.jpg"
+      },
+
+      {
+        type: "single",
+        image: "images/House_B_6.jpg"
+      }
+
+    ]
+
+  },
+
+  {
+
+    title: "Modern Luxury Villa",
+
+    price: "₱52,000,000",
+
+    location: "Alabang, Muntinlupa",
+
+    description:
+    "A luxurious villa with spacious living areas, elegant modern architecture, and premium amenities perfect for families.",
+
+    details: [
+
+      "Lot Area: 500 sqm",
+      "Floor Area: 650 sqm",
+
+      "6 Bedrooms",
+      "6 Toilet & Bath",
+
+      "Swimming Pool",
+      "Cinema Room",
+
+      "Office Room",
+      "2 Kitchens",
+
+      "Garden Area",
+      "4 Car Garage"
+
+    ],
+
+    slides: [
+
+      {
+        type: "single",
+        image: "images/villa1.jpg"
+      },
+
+      {
+        type: "grid",
+
+        images: [
+          "images/villa2.jpg",
+          "images/villa3.jpg",
+          "images/villa4.jpg"
+        ]
+      },
+
+      {
+        type: "single",
+        image: "images/villa5.jpg"
+      }
+
+    ]
+
+  }
 
 ];
 
+/* =====================================================
+   GET PROPERTY ID FROM URL
+===================================================== */
+
+const params = new URLSearchParams(window.location.search);
+
+const propertyId = params.get("id") || 0;
+
+const property = properties[propertyId];
+
+/* =====================================================
+   INSERT PROPERTY DATA
+===================================================== */
+
+document.getElementById("property-title")
+.innerText = property.title;
+
+
+document.getElementById("property-price")
+.innerText = property.price;
+
+
+document.getElementById("property-location")
+.innerText = property.location;
+
+
+document.getElementById("property-description")
+.innerText = property.description;
+
+/* =====================================================
+   DETAILS GRID
+===================================================== */
+
+const detailsGrid =
+document.getElementById("details-grid");
+
+detailsGrid.innerHTML = `
+
+  <p>
+
+    ${property.details.join("<br>")}
+
+  </p>
+
+`;
+
+/* =====================================================
+   SLIDER
+===================================================== */
+
 let current = 0;
 
-const slider = document.getElementById("slider");
+const sliderContent =
+document.getElementById("slider-content");
+
+function renderSlide(){
+
+  const slide = property.slides[current];
+
+  /* SINGLE */
+  if(slide.type === "single"){
+
+    sliderContent.innerHTML = `
+
+      <div class="single-slide fade-in">
+        <img src="${slide.image}" onclick="openModal('${slide.image}')">
+      </div>
+
+    `;
+  }
+
+  /* GRID */
+  else if(slide.type === "grid"){
+
+    sliderContent.innerHTML = `
+
+      <div class="grid-slide fade-in">
+
+        <img src="${slide.images[0]}" onclick="openModal('${slide.images[0]}')">
+
+        <img src="${slide.images[1]}" onclick="openModal('${slide.images[1]}')">
+
+        <img src="${slide.images[2]}" onclick="openModal('${slide.images[2]}')">
+
+      </div>
+
+    `;
+  }
+
+}
 
 /* NEXT */
-function next() {
+function next(){
 
   current++;
 
-  if(current >= images.length) {
+  if(current >= property.slides.length){
     current = 0;
   }
 
-  slider.src = images[current];
+  renderSlide();
 }
 
 /* PREVIOUS */
-function prev() {
+function prev(){
 
   current--;
 
-  if(current < 0) {
-    current = images.length - 1;
+  if(current < 0){
+    current = property.slides.length - 1;
   }
 
-  slider.src = images[current];
+  renderSlide();
 }
+
+/* FIRST RENDER */
+renderSlide();
 
 /* NAVBAR SCROLL EFFECT */
 window.addEventListener("scroll", function () {
@@ -209,7 +379,43 @@ window.addEventListener("scroll", function () {
 
 });
 
+/* Modal */
+function openModal(image){
+
+  document.getElementById("imageModal")
+  .style.display = "flex";
+
+  document.getElementById("modalImage")
+  .src = image;
+}
+
+function closeModal(){
+
+  document.getElementById("imageModal")
+  .style.display = "none";
+}
+
 </script>
+
+<!-- imageModal-->
+ <div id="imageModal" class="image-modal">
+
+  <span class="close-modal" onclick="closeModal()">
+    ✕
+  </span>
+
+  <img id="modalImage">
+
+</div>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+

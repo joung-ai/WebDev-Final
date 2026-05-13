@@ -1,87 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Houses</title>
 
   <link rel="stylesheet" href="style.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="properties">
 
 <!-- NAVBAR -->
 <nav>
+
   <div class="nav-left">
+
     <img src="images/logo.jpg" class="logo">
+
     <span>YM Realty</span>
+
   </div>
 
   <ul>
+
     <li><a href="index.html" class="btn nav-btn">Home</a></li>
+
     <li><a href="about.html" class="btn nav-btn">About</a></li>
+
     <li><a href="properties.html" class="btn nav-btn">Properties</a></li>
+
     <li><a href="contact.html" class="btn nav-btn">Contact</a></li>
+
   </ul>
+
 </nav>
 
 <!-- HERO -->
 <section class="property-hero">
 
   <div class="about-hero-text">
+
     <h1>Houses</h1>
+
     <p>Find your perfect dream home</p>
+
   </div>
 
 </section>
 
-<!-- MAIN CONTENT -->
+<!-- MAIN -->
 <section class="houses-page">
 
   <div class="houses-container">
 
-    <h2>Houses for Sale</h2>
+    <h2 class="standard-h2">
+      Houses for Sale
+    </h2>
 
-    <div class="cards">
-
-      <!-- CARD 1 -->
-      <div class="card">
-
-        <img src="images/House_A_1.jpg">
-
-      <div class="card-overlay">
-          <h3>Bungalow</h3>
-          <p>BF Homes, Parañaque</p>
-
-          <a href="details.html" class="btn">
-            View Details
-          </a>
-        </div>
-
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="card">
-
-        <img src="images/House_B_1.jpg">
-
-        <div class="card-overlay">
-          <h3>3 Storey House</h3>
-          <p>Green Woods Exclusive Village</p>
-          <a href="details.html" class="btn">
-            View Details
-          </a>
-        </div>
-
-      </div>
-
-    </div>
+    <div class="cards" id="houses-container"></div>
 
   </div>
 
 </section>
+
+<script>
+
+const properties = [
+
+  {
+
+    title: "Bungalow",
+
+    location: "BF Homes, Parañaque",
+
+    image: "images/House_A_1.jpg",
+
+    type: "house"
+
+  },
+
+  {
+
+    title: "3 Storey House",
+
+    location: "Green Woods Exclusive Village",
+
+    image: "images/House_B_1.jpg",
+
+    type: "house"
+
+  },
+
+  {
+
+    title: "Modern Luxury Villa",
+
+    location: "Alabang, Muntinlupa",
+
+    image: "images/villa1.jpg",
+
+    type: "house"
+
+  },
+
+  {
+
+    title: "Luxury Mansion",
+
+    location: "Taguig City",
+
+    image: "images/mansion1.jpg",
+
+    type: "house"
+
+  }
+
+];
+
+const container =
+document.getElementById("houses-container");
+
+properties.forEach((property, index) => {
+
+  if(property.type === "house"){
+
+    container.innerHTML += `
+
+      <div class="card">
+
+        <img src="${property.image}">
+
+        <div class="card-overlay">
+
+          <h3>${property.title}</h3>
+
+          <p>${property.location}</p>
+
+          <a href="details.html?id=${index}" class="btn">
+            View Details
+          </a>
+
+        </div>
+
+      </div>
+
+    `;
+  }
+
+});
+
+</script>
 
 </body>
 </html>

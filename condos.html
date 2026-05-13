@@ -1,35 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Condos</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Condos</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="properties">
+
+<!-- NAVBAR -->
 <nav>
+
   <div class="nav-left">
-    <img src="images\logo.jpg" class="logo">
+
+    <img src="images/logo.jpg" class="logo">
+
     <span>YM Realty</span>
+
   </div>
+
   <ul>
+
     <li><a href="index.html" class="btn nav-btn">Home</a></li>
+
     <li><a href="about.html" class="btn nav-btn">About</a></li>
+
     <li><a href="properties.html" class="btn nav-btn">Properties</a></li>
+
     <li><a href="contact.html" class="btn nav-btn">Contact</a></li>
+
   </ul>
+
 </nav>
 
+<!-- HERO -->
+<section class="property-hero">
 
-<h2>Condominiums</h2>
+  <div class="about-hero-text">
 
-<div class="cards">
-  <div class="card">
-    <img src="https://via.placeholder.com/300">
-    <h3>Condo A</h3>
-    <p>₱2,500,000</p>
-    <a href="details.html" class="btn">View Details</a>
+    <h1>Condominiums</h1>
+
+    <p>Luxury condo living</p>
+
   </div>
-</div>
+
+</section>
+
+<!-- MAIN -->
+<section class="houses-page">
+
+  <div class="houses-container">
+
+    <h2 class="standard-h2">
+      Condos for Sale
+    </h2>
+
+    <div class="cards" id="condos-container"></div>
+
+  </div>
+
+</section>
+
+<script>
+
+const properties = [
+
+  {
+
+    title: "Luxury Condo Unit",
+
+    location: "Makati City",
+
+    image: "images/condo1.jpg",
+
+    type: "condo"
+
+  },
+
+  {
+
+    title: "Skyline Residence",
+
+    location: "BGC, Taguig",
+
+    image: "images/condo2.jpg",
+
+    type: "condo"
+
+  },
+
+  {
+
+    title: "Modern Condo Suite",
+
+    location: "Ortigas Center",
+
+    image: "images/condo3.jpg",
+
+    type: "condo"
+
+  }
+
+];
+
+const container =
+document.getElementById("condos-container");
+
+properties.forEach((property, index) => {
+
+  if(property.type === "condo"){
+
+    container.innerHTML += `
+
+      <div class="card">
+
+        <img src="${property.image}">
+
+        <div class="card-overlay">
+
+          <h3>${property.title}</h3>
+
+          <p>${property.location}</p>
+
+          <a href="details.html?id=${index}" class="btn">
+            View Details
+          </a>
+
+        </div>
+
+      </div>
+
+    `;
+  }
+
+});
+
+</script>
 
 </body>
 </html>
