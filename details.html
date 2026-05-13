@@ -129,125 +129,679 @@
 
 /* =====================================================
    PROPERTY DATABASE
+   Houses: id 0-5
+   Condos:  id 6-11
 ===================================================== */
 
 const properties = [
 
+  /* ===== HOUSE 1 ===== */
   {
-
-    title: "3 Storey House",
-
-    price: "₱38,000,000",
-
-    location: "BF Homes, Parañaque",
-
+    title: "Brand New House and Lot",
+    price: "₱12,000,000 neg.",
+    location: "Southpoint Subdivision, Santa Rosa",
     description:
-    "Live in elegance with this stunning 3-storey residence located in BF Homes, Parañaque. Featuring spacious interiors, premium finishes, and multiple entertainment areas.",
-
+    "Brand new house and lot located at Southpoint Subdivision, Santa Rosa, near Malayan College. Clean title. Features spacious bedrooms with T&B, maid's room with T&B, powder room, and a 2-car garage.",
     details: [
-
-      "Lot Area: 350 sqm",
-      "Floor Area: 480 sqm",
-
-      "5 Bedrooms",
-      "5 Toilet & Bath",
-
+      "Lot Area: 180 sqm",
+      "Floor Area: 220 sqm",
+      "3 Bedrooms with T&B",
+      "Maid's Room with T&B",
       "Powder Room",
-      "Modern Kitchen",
-
-      "Dirty Kitchen",
-      "Service Area",
-
-      "Family Area",
-      "3 Car Garage"
-
+      "2 Car Garage",
+      "Clean Title"
     ],
-
     slides: [
-
       {
         type: "single",
-        image: "images/House_B_1.jpg"
+        image: "images/House_1_1.jpg"
       },
-
       {
         type: "grid",
-
         images: [
-          "images/House_B_2.jpg",
-          "images/House_B_3.jpg",
-          "images/House_B_4.jpg"
+          "images/House_1_2.jpg",
+          "images/House_1_3.jpg",
+          "images/House_1_4.jpg"
         ]
       },
-
       {
         type: "single",
-        image: "images/House_B_5.jpg"
+        image: "images/House_1_5.jpg"
       },
-
+      {
+        type: "grid",
+        images: [
+          "images/House_1_6.jpg",
+          "images/House_1_7.jpg",
+          "images/House_1_8.jpg"
+        ]
+      },
       {
         type: "single",
-        image: "images/House_B_6.jpg"
+        image: "images/House_1_9.jpg"
+      },
+      {
+        type: "single",
+        image: "images/House_1_10.jpg"
       }
-
     ]
-
   },
 
+  /* ===== HOUSE 2 ===== */
   {
-
-    title: "Modern Luxury Villa",
-
-    price: "₱52,000,000",
-
-    location: "Alabang, Muntinlupa",
-
+    title: "Modern Industrial House and Lot",
+    price: "₱36,000,000 net",
+    location: "Parkplace Village, Imus Cavite",
     description:
-    "A luxurious villa with spacious living areas, elegant modern architecture, and premium amenities perfect for families.",
-
+    "Modern industrial newly built house and lot for sale in Parkplace Village, Imus Cavite. Features 6 bedrooms, 4 T&B, 6-car carport, swimming pool, theatre room, roof deck, fully air conditioned with CCTV installed.",
     details: [
-
-      "Lot Area: 500 sqm",
-      "Floor Area: 650 sqm",
-
+      "Lot Area: 300 sqm",
+      "Floor Area: 345 sqm",
       "6 Bedrooms",
-      "6 Toilet & Bath",
-
+      "4 Toilet & Bath",
+      "6 Car Parking",
       "Swimming Pool",
-      "Cinema Room",
-
-      "Office Room",
-      "2 Kitchens",
-
-      "Garden Area",
-      "4 Car Garage"
-
+      "Living & Dining Area",
+      "Kitchen & Dirty Kitchen",
+      "Maid's Room with Toilet",
+      "Family Hall with Balcony",
+      "Theatre Room",
+      "Roof Deck",
+      "CCTV Installed",
+      "Fully Air Conditioned"
     ],
-
     slides: [
-
       {
         type: "single",
-        image: "images/villa1.jpg"
+        image: "images/House_2_1.jpg"
       },
-
       {
         type: "grid",
-
         images: [
-          "images/villa2.jpg",
-          "images/villa3.jpg",
-          "images/villa4.jpg"
+          "images/House_2_2.jpg",
+          "images/House_2_3.jpg",
+          "images/House_2_4.jpg"
         ]
       },
-
       {
         type: "single",
-        image: "images/villa5.jpg"
+        image: "images/House_2_5.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/House_2_6.jpg",
+          "images/House_2_7.jpg",
+          "images/House_2_8.jpg"
+        ]
       }
-
     ]
+  },
 
+  /* ===== HOUSE 3 ===== */
+  {
+    title: "House and Lot with Swimming Pool",
+    price: "₱98,000,000",
+    location: "Park Ridge Estate",
+    description:
+    "Expansive house and lot for sale at Park Ridge Estate. Main house features 5 rooms, 4 T&B, powder room, Siematic kitchen cabinet, Wolf kitchen top and hood, dirty kitchen with industrial equipment, swimming pool, 7-car garage, lanai, pond, and a basement with 7 rooms and 3 T&B. Includes 2 guest houses and a 10kw solar system.",
+    details: [
+      "Lot Area: 1,382 sqm",
+      "Floor Area: 2,000 sqm",
+      "5 Bedrooms (Main House)",
+      "4 Toilet & Bath",
+      "Powder Room",
+      "Swimming Pool",
+      "7 Car Garage",
+      "Dirty Kitchen",
+      "Laundry Area",
+      "Pond & Lanai",
+      "Basement: 7 Rooms, 3 T&B",
+      "2 Guest Houses",
+      "10kw Solar System"
+    ],
+    slides: [
+      {
+        type: "single",
+        image: "images/House_3_1.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/House_3_2.jpg",
+          "images/House_3_3.jpg",
+          "images/House_3_4.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/House_3_5.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/House_3_6.jpg",
+          "images/House_3_7.jpg",
+          "images/House_3_8.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/House_3_9.jpg"
+      },
+      {
+        type: "single",
+        image: "images/House_3_10.jpg"
+      }
+    ]
+  },
+
+  /* ===== HOUSE 4 ===== */
+  {
+    title: "Fully Furnished Smart Home",
+    price: "₱55,000,000 nego",
+    location: "Mission Hills, Havila Antipolo Rizal",
+    description:
+    "Fully furnished smart home in Mission Hills, Havila Antipolo Rizal. Features voice command controls, smart automatic gate, smart toilets, water filtration, swimming pool, and a 5kw solar hybrid setup with backup battery (upgradable to 20kw). Equipped with 10 Daikin split-type aircons.",
+    details: [
+      "Lot Area: 308 sqm",
+      "Floor Area: 380 sqm (gross)",
+      "4 Bedrooms with Walk-in T&B",
+      "1 Office Room",
+      "Powder Room",
+      "Main Kitchen & Dirty Kitchen",
+      "Maid's Room & Driver's Room",
+      "Swimming Pool",
+      "2 Car Garage",
+      "Smart Home System",
+      "Voice Command Controls",
+      "Water Filtration System",
+      "10 Daikin Split-Type Aircons",
+      "5kw Solar Hybrid Setup"
+    ],
+    slides: [
+      {
+        type: "single",
+        image: "images/House_4_1.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/House_4_2.jpg",
+          "images/House_4_3.jpg",
+          "images/House_4_4.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/House_4_5.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/House_4_6.jpg",
+          "images/House_4_7.jpg",
+          "images/House_4_8.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/House_4_9.jpg"
+      },
+      {
+        type: "single",
+        image: "images/House_4_10.jpg"
+      }
+    ]
+  },
+
+  /* ===== HOUSE 5 ===== */
+  {
+    title: "House and Lot in Loyola Grand Villas",
+    price: "₱128,000,000",
+    location: "Loyola Grand Villas, Quezon City",
+    description:
+    "Stunning house and lot with swimming pool in Loyola Grand Villas, Quezon City. Clean title. Features 5 bedrooms, 4 T&B, 4-car garage, fully furnished, spacious living and dining areas, large lanai, swimming pool, sauna, and generous storage. Includes 3 staff bedrooms, backup generator, and solar power system.",
+    details: [
+      "Lot Area: 500 sqm",
+      "Floor Area: Approx. 800 sqm",
+      "5 Bedrooms",
+      "4 Toilet & Bath",
+      "4 Car Garage",
+      "Fully Furnished",
+      "Swimming Pool",
+      "Sauna",
+      "Large Lanai",
+      "3 Staff Bedrooms",
+      "Backup Generator",
+      "Solar Power System",
+      "Clean Title"
+    ],
+    slides: [
+      {
+        type: "single",
+        image: "images/House_5_1.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/House_5_2.jpg",
+          "images/House_5_3.jpg",
+          "images/House_5_4.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/House_5_5.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/House_5_6.jpg",
+          "images/House_5_7.jpg",
+          "images/House_5_8.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/House_5_9.jpg"
+      }
+    ]
+  },
+
+  /* ===== HOUSE 6 ===== */
+  {
+    title: "Astounding House and Lot",
+    price: "₱150,000,000",
+    location: "Tierra Pura, Quezon City",
+    description:
+    "Astounding brilliant house and lot for sale in Tierra Pura, Quezon City. Features 3 bedrooms, gym, study/office, entertainment room, and 4-car carport. Master bedroom has an ante room and walk-in closet. All toilet fixtures are Duravit and Hansgrohe. Daikin inverter aircon units in all rooms. Semi-furnished with high ceiling, spacious lanai, elevated entrance, and premium finishes throughout.",
+    details: [
+      "Lot Area: 605 sqm",
+      "Floor Area: 800 sqm",
+      "3 Bedrooms",
+      "1 Gym",
+      "1 Study / Office",
+      "1 Entertainment Room",
+      "4 Car Carport",
+      "Master BR with Ante Room & Walk-in Closet",
+      "3 Separate Staff Quarters",
+      "Duravit & Hansgrohe Toilet Fixtures",
+      "Daikin Inverter Aircon All Rooms",
+      "Narra Plank Flooring All Rooms",
+      "High Ceiling",
+      "Spacious Lanai",
+      "Semi-Furnished"
+    ],
+    slides: [
+      {
+        type: "single",
+        image: "images/House_6_1.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/House_6_2.jpg",
+          "images/House_6_3.jpg",
+          "images/House_6_4.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/House_6_5.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/House_6_6.jpg",
+          "images/House_6_7.jpg",
+          "images/House_6_8.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/House_6_9.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/House_6_10.jpg",
+          "images/House_6_11.jpg",
+          "images/House_6_1.jpg"
+        ]
+      }
+    ]
+  },
+
+  /* ===== CONDO 1 ===== */
+  {
+    title: "Avida Turf BGC - 1 Bedroom",
+    price: "₱33,000 / month",
+    location: "BGC, Taguig",
+    description:
+    "For lease! 1 bedroom fully furnished unit at the 25th floor of Avida Turf BGC. 35 sqm with balcony. Perfect for professionals looking for a premium BGC address.",
+    details: [
+      "Floor Area: 35 sqm",
+      "1 Bedroom",
+      "1 Toilet & Bath",
+      "Balcony",
+      "25th Floor",
+      "Fully Furnished",
+      "For Lease"
+    ],
+    slides: [
+      {
+        type: "single",
+        image: "images/Condo_1_1.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_1_2.jpg",
+          "images/Condo_1_3.jpg",
+          "images/Condo_1_4.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/Condo_1_5.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_1_6.jpg",
+          "images/Condo_1_7.jpg",
+          "images/Condo_1_8.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/Condo_1_9.jpg"
+      },
+      {
+        type: "single",
+        image: "images/Condo_1_10.jpg"
+      }
+    ]
+  },
+
+  /* ===== CONDO 2 ===== */
+  {
+    title: "The Grand Midori Makati Tower 1",
+    price: "Price upon inquiry",
+    location: "Makati City",
+    description:
+    "For lease! 1 bedroom unit at The Grand Midori Makati Tower 1. 55 sqm on the 16th floor with balcony. Payment method: 2 months advance, 2 months deposit. No parking. No pets allowed.",
+    details: [
+      "Floor Area: 55 sqm",
+      "1 Bedroom",
+      "1 Shower and Bath",
+      "Balcony",
+      "16th Floor",
+      "No Parking",
+      "No Pets Allowed",
+      "2 Months Advance + 2 Months Deposit",
+      "For Lease"
+    ],
+    slides: [
+      {
+        type: "single",
+        image: "images/Condo_2_1.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_2_2.jpg",
+          "images/Condo_2_3.jpg",
+          "images/Condo_2_4.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/Condo_2_5.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_2_6.jpg",
+          "images/Condo_2_7.jpg",
+          "images/Condo_2_8.jpg"
+        ]
+      }
+    ]
+  },
+
+  /* ===== CONDO 3 ===== */
+  {
+    title: "One Uptown BGC - 1 Bedroom",
+    price: "₱55,000 / month",
+    location: "BGC, Taguig",
+    description:
+    "For lease! 1 bedroom fully furnished unit at One Uptown BGC. 60 sqm on the 10th floor. Premium BGC living with easy access to lifestyle destinations.",
+    details: [
+      "Floor Area: 60 sqm",
+      "1 Bedroom",
+      "10th Floor",
+      "Fully Furnished",
+      "For Lease"
+    ],
+    slides: [
+      {
+        type: "single",
+        image: "images/Condo_3_1.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_3_2.jpg",
+          "images/Condo_3_3.jpg",
+          "images/Condo_3_4.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/Condo_3_5.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_3_6.jpg",
+          "images/Condo_3_7.jpg",
+          "images/Condo_3_8.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/Condo_3_9.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_3_10.jpg",
+          "images/Condo_3_11.jpg",
+          "images/Condo_3_12.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/Condo_3_13.jpg"
+      },
+      {
+        type: "single",
+        image: "images/Condo_3_14.jpg"
+      }
+    ]
+  },
+
+  /* ===== CONDO 4 ===== */
+  {
+    title: "Avida City Flex BGC - Studio",
+    price: "₱30,000 / month",
+    location: "BGC, Taguig",
+    description:
+    "For lease! Studio unit at Avida City Flex BGC Tower 2. 38 sqm on the 11th floor. No parking. Ideal for young professionals in the BGC area.",
+    details: [
+      "Floor Area: 38 sqm",
+      "Studio Unit",
+      "11th Floor",
+      "Tower 2",
+      "No Parking",
+      "For Lease"
+    ],
+    slides: [
+      {
+        type: "single",
+        image: "images/Condo_4_1.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_4_2.jpg",
+          "images/Condo_4_3.jpg",
+          "images/Condo_4_4.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/Condo_4_5.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_4_6.jpg",
+          "images/Condo_4_7.jpg",
+          "images/Condo_4_8.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/Condo_4_9.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_4_10.jpg",
+          "images/Condo_4_11.jpg",
+          "images/Condo_4_12.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/Condo_4_13.jpg"
+      }
+    ]
+  },
+
+  /* ===== CONDO 5 ===== */
+  {
+    title: "Avida Tower 1 - 2 Bedrooms",
+    price: "₱60,000 / month (inclusive of dues)",
+    location: "34th Street, Bonifacio, Taguig",
+    description:
+    "For lease! 2 bedroom fully furnished unit at Avida Tower 1, 23rd floor. 62 sqm. Walking distance to Uptown Mall, Hyatt, St. Luke's, High Street, Market Market, and International School. Features concierge, jogging trail, kids playground, gym, 24/7 security, function rooms, and swimming pool. 12 months contract, 2 months deposit, 2 months advance.",
+    details: [
+      "Floor Area: 62 sqm",
+      "2 Bedrooms",
+      "2 Bathrooms",
+      "1 Maid's Room / Storage",
+      "23rd Floor",
+      "Fully Furnished",
+      "Concierge",
+      "Gym & Swimming Pool",
+      "24/7 Security",
+      "Kids Playground & Jogging Trail",
+      "Function Rooms",
+      "12 Months Contract",
+      "2 Months Deposit + 2 Months Advance",
+      "For Lease"
+    ],
+    slides: [
+      {
+        type: "single",
+        image: "images/Condo_5_1.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_5_2.jpg",
+          "images/Condo_5_3.jpg",
+          "images/Condo_5_4.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/Condo_5_5.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_5_6.jpg",
+          "images/Condo_5_7.jpg",
+          "images/Condo_5_8.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/Condo_5_9.jpg"
+      },
+      {
+        type: "single",
+        image: "images/Condo_5_10.jpg"
+      }
+    ]
+  },
+
+  /* ===== CONDO 6 ===== */
+  {
+    title: "One Maridien Tower 1 - 2 Bedrooms",
+    price: "₱120,000 / month (inclusive of dues)",
+    location: "BGC, High Floor",
+    description:
+    "For lease! 2 bedroom unit at One Maridien Tower 1. 93 sqm on the 28th floor facing the park. Includes 2 T&B and 1 maid's room/utility. Fully furnished, newly painted, and ready for occupancy. 1 year contract.",
+    details: [
+      "Floor Area: 93 sqm",
+      "2 Bedrooms",
+      "2 Toilet & Bath",
+      "1 Maid's Room / Utility",
+      "28th Floor",
+      "Facing the Park",
+      "Fully Furnished",
+      "Newly Painted",
+      "Ready for Occupancy",
+      "1 Year Contract",
+      "Inclusive of Dues",
+      "For Lease"
+    ],
+    slides: [
+      {
+        type: "single",
+        image: "images/Condo_6_1.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_6_2.jpg",
+          "images/Condo_6_3.jpg",
+          "images/Condo_6_4.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/Condo_6_5.jpg"
+      },
+      {
+        type: "grid",
+        images: [
+          "images/Condo_6_6.jpg",
+          "images/Condo_6_7.jpg",
+          "images/Condo_6_8.jpg"
+        ]
+      },
+      {
+        type: "single",
+        image: "images/Condo_6_9.jpg"
+      }
+    ]
   }
 
 ];
@@ -410,12 +964,3 @@ function closeModal(){
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-

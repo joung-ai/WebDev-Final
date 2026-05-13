@@ -73,39 +73,45 @@
 const properties = [
 
   {
-
-    title: "Luxury Condo Unit",
-
-    location: "Makati City",
-
-    image: "images/condo1.jpg",
-
-    type: "condo"
-
-  },
-
-  {
-
-    title: "Skyline Residence",
-
+    title: "Avida Turf BGC - 1 Bedroom",
     location: "BGC, Taguig",
-
-    image: "images/condo2.jpg",
-
+    image: "images/Condo_1_1.jpg",
     type: "condo"
-
   },
 
   {
-
-    title: "Modern Condo Suite",
-
-    location: "Ortigas Center",
-
-    image: "images/condo3.jpg",
-
+    title: "The Grand Midori Makati Tower 1",
+    location: "Makati City",
+    image: "images/Condo_2_1.jpg",
     type: "condo"
+  },
 
+  {
+    title: "One Uptown BGC - 1 Bedroom",
+    location: "BGC, Taguig",
+    image: "images/Condo_3_1.jpg",
+    type: "condo"
+  },
+
+  {
+    title: "Avida City Flex BGC - Studio",
+    location: "BGC, Taguig",
+    image: "images/Condo_4_1.jpg",
+    type: "condo"
+  },
+
+  {
+    title: "Avida Tower 1 - 2 Bedrooms",
+    location: "34th Street, Bonifacio, Taguig",
+    image: "images/Condo_5_1.jpg",
+    type: "condo"
+  },
+
+  {
+    title: "One Maridien Tower 1 - 2 Bedrooms",
+    location: "High Floor, BGC",
+    image: "images/Condo_6_1.jpg",
+    type: "condo"
   }
 
 ];
@@ -129,7 +135,7 @@ properties.forEach((property, index) => {
 
           <p>${property.location}</p>
 
-          <a href="details.html?id=${index}" class="btn">
+          <a href="details.html?id=${index + 6}" class="btn">
             View Details
           </a>
 
